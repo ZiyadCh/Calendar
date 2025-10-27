@@ -7,5 +7,11 @@ for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     modal.className = "popopen";
     fade.className = "fade";
+    data[index].innerHTML = "gggggg";
   });
 }
+
+fade.addEventListener("click", () => {
+  modal.className = "popclose";
+  fade.className = "fadeclose";
+});
