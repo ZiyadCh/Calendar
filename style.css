@@ -1,7 +1,4 @@
 @import "tailwindcss";
-body {
-  background: #999;
-}
 table {
   width: 80%;
 }
