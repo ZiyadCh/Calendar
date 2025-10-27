@@ -13,8 +13,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-table {
-}
 th {
   height: 50px;
   width: 14%;
@@ -30,12 +28,18 @@ td {
   transition: 0.3s;
   text-align: end;
   vertical-align: text-top;
-  font-weight: 200;
-  font-size: smaller;
+  font-size: 1rem;
   background: rgb(218, 218, 218);
+  padding: 5px;
 }
 td:hover {
-  box-shadow: inset 0 0 10px cadetblue;
+  box-shadow: inset 0 0 1000px #0005;
+  color: blue;
+  font-weight: bold;
+}
+.weekend {
+  background: gray;
+  cursor: no-drop;
 }
 h1 {
   text-shadow: 0 0 10px gray;
