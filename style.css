@@ -72,6 +72,9 @@ label button {
   }
 }
 
+.popclose {
+  display: none;
+}
 .popopen {
   position: absolute;
   background-color: white;
@@ -81,7 +84,16 @@ label button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
-.popclose {
+
+.fade {
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+  background-color: #0007;
+  position: absolute;
+}
+.fadeclose {
   display: none;
 }
