@@ -4,19 +4,19 @@ const fade = document.querySelector(".fadeclose");
 const bdy = document.body;
 const reTexte = document.getElementById("reTexte");
 const btn = document.getElementById("btn");
+let target;
 
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     modal.className = "popopen";
     fade.className = "fade";
-    let target = data[index];
+    target = data[index];
   });
 }
-
 btn.addEventListener("click", () => {
-  target.innerHTML = `<h1>${reTexte.value}</h1>`;
+  reTexte.classList.add("reservation");
+  target.innerHTML = `${target.innerHTML} <h1>${reTexte.value}</h1>`;
 });
-
 fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
