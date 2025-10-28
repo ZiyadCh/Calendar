@@ -81,6 +81,7 @@ label button {
   width: 50%;
   height: 40%;
   display: flex;
+  gap: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -100,6 +101,7 @@ label button {
 }
 
 .fade {
+  top: 0;
   width: 100vw;
   height: 100vh;
   background-color: #0007;
