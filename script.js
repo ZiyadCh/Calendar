@@ -9,15 +9,12 @@ for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     modal.className = "popopen";
     fade.className = "fade";
-
-    btn.addEventListener("click", () => {
-      data[index].innerHTML = `${index + 1} <h1>${reTexte.value}</h1>`;
-    });
+    let target = data[index];
   });
 }
 
 btn.addEventListener("click", () => {
-  data[index].innerHTML = `${index + 1} <h1>${reTexte.value}</h1>`;
+  target.innerHTML = `<h1>${reTexte.value}</h1>`;
 });
 
 fade.addEventListener("click", () => {
