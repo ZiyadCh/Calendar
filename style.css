@@ -25,7 +25,7 @@ table {
 }
 td {
   height: 40px;
-  height: 5rem;
+  height: 40vh;
   transition: 0.3s;
   text-align: end;
   vertical-align: text-top;
@@ -66,10 +66,11 @@ label button {
   display: none;
 }
 .popopen {
-  position: absolute;
+  position: fixed;
   background-color: white;
+  top: 25%;
   width: 50%;
-  height: 40%;
+  height: 50%;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -95,7 +96,7 @@ label button {
   width: 100vw;
   height: 100vh;
   background-color: #0007;
-  position: absolute;
+  position: fixed;
 }
 .fadeclose {
   display: none;
@@ -104,6 +105,9 @@ label button {
   background-color: rebeccapurple;
   border: solid 1px;
   height: max-content;
+}
+.card {
+  height: 50%;
 }
 
 @media (max-width: 700px) {
