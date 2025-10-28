@@ -61,18 +61,6 @@ label button {
   background: greenyellow;
   border: none;
 }
-@media (max-width: 700px) {
-  html {
-    font-size: 8px;
-  }
-
-  :root {
-    --calendar-width: 100%;
-  }
-  td {
-    height: 10rem;
-  }
-}
 
 .popclose {
   display: none;
@@ -111,4 +99,22 @@ label button {
 }
 .fadeclose {
   display: none;
+}
+.reservation {
+  background-color: rebeccapurple;
+  border: solid 1px;
+  height: max-content;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+
+  :root {
+    --calendar-width: 100%;
+  }
+  td {
+    height: 10rem;
+  }
 }

@@ -14,8 +14,8 @@ for (let index = 0; index < data.length; index++) {
   });
 }
 btn.addEventListener("click", () => {
-  reTexte.classList.add("reservation");
-  target.innerHTML = `${target.innerHTML} <h1>${reTexte.value}</h1>`;
+  target.classList.add("reservation");
+  target.innerHTML = `${target.innerHTML} <h3>${reTexte.value}</h3>`;
 });
 fade.addEventListener("click", () => {
   modal.className = "popclose";
