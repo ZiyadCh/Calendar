@@ -86,11 +86,21 @@ label button {
   align-items: center;
   z-index: 5;
 }
+.popopen button {
+  border: none;
+  padding: 1em;
+  background: orangered;
+  color: white;
+}
+.popopen button:hover {
+  background: white;
+  color: orangered;
+  border: orangered 1px solid;
+}
 
 .fade {
   width: 100vw;
-  height: 100vw;
-  object-fit: cover;
+  height: 100vh;
   background-color: #0007;
   position: absolute;
 }

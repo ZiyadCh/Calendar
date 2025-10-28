@@ -7,7 +7,8 @@ for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     modal.className = "popopen";
     fade.className = "fade";
-    data[index].innerHTML = "gggggg";
+    data[index].innerHTML = `${index + 1} <h1>yes</h1>`;
+    reserve.innerHTML = "yes";
   });
 }
 
