@@ -91,6 +91,7 @@ label button {
   padding: 1em;
   background: orangered;
   color: white;
+  transition: 0.3s;
 }
 .popopen button:hover {
   background: white;
