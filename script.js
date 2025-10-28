@@ -15,7 +15,7 @@ for (let index = 0; index < data.length; index++) {
 }
 btn.addEventListener("click", () => {
   target.classList.add("reservation");
-  target.innerHTML = `${target.innerHTML} <h3>${reTexte.value}</h3>`;
+  target.innerHTML = `${target.innerHTML} <div class="card"><h3>${reTexte.value}</h3> </div>`;
 });
 fade.addEventListener("click", () => {
   modal.className = "popclose";

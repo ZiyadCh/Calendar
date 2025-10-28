@@ -102,11 +102,11 @@ label button {
   display: none;
 }
 .reservation {
-  background-color: rebeccapurple;
   border: solid 1px;
   height: max-content;
 }
 .card {
+  background-color: rebeccapurple;
   height: 50%;
 }
 
