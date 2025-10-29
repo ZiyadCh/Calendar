@@ -22,9 +22,9 @@ for (let index = 0; index < data.length; index++) {
 btn.addEventListener("click", () => {
   target.classList.add("reservation");
   target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
-
+  const card = document.querySelector(".card");
   if (sprint.checked == true) {
-    target.firstChild.style.background = "red";
+    card.style.background = "red";
   }
 
   modal.className = "popclose";
