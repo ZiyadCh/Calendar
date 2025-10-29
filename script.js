@@ -5,6 +5,7 @@ const reTexte = document.getElementById("reTexte");
 const btn = document.getElementById("btn");
 const time_start = document.getElementById("time_start");
 let target;
+let reserveType;
 
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
