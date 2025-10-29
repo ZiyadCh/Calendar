@@ -7,6 +7,11 @@ const time_start = document.getElementById("time_start");
 let target;
 let reserveType;
 
+let reserve_card = document.createElement("div");
+document.body.appendChild(reserve_card);
+reserve_card.className = "card";
+console.log(reserve_card);
+
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     modal.className = "popopen";
@@ -16,7 +21,8 @@ for (let index = 0; index < data.length; index++) {
 }
 btn.addEventListener("click", () => {
   target.classList.add("reservation");
-  target.innerHTML = `${target.innerHTML} <div class="card"> <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
+  reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
+  target.appendChild(reserve_card);
 
   modal.className = "popclose";
   fade.className = "fadeclose";
