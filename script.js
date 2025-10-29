@@ -6,6 +6,11 @@ const btn = document.getElementById("btn");
 const time_start = document.getElementById("time_start");
 let target;
 let reserveType;
+//
+const sprint = document.getElementById("sprint");
+const client = document.getElementById("client");
+const debrief = document.getElementById("debrief");
+//
 
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
@@ -18,6 +23,10 @@ btn.addEventListener("click", () => {
   target.classList.add("reservation");
   target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
 
+  if (sprint.checked == true) {
+    target.firstChild.style.background = "red";
+  }
+
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
@@ -25,5 +34,3 @@ fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
-// drag
-target.addEventListener("dragstart", function drag(e) {});
