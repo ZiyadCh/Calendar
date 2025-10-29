@@ -25,7 +25,3 @@ fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
-
-function proceed(index) {
-  data[index].innerHTML = `${index + 1} <h1>${reTexte.value}</h1>`;
-}
