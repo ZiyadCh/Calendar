@@ -8,7 +8,6 @@ let target;
 let reserveType;
 
 let reserve_card = document.createElement("div");
-document.body.appendChild(reserve_card);
 reserve_card.className = "card";
 console.log(reserve_card);
 
@@ -31,7 +30,3 @@ fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
-
-function proceed(index) {
-  data[index].innerHTML = `${index + 1} <h1>${reTexte.value}</h1>`;
-}
