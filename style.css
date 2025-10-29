@@ -34,8 +34,6 @@ td {
 }
 td:hover {
   box-shadow: inset 0 0 1000px #0595;
-  color: blue;
-  font-weight: bold;
   transform: translateY(-10px);
 }
 .weekend {
@@ -106,6 +104,10 @@ label button {
 }
 .card {
   background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
 }
 
 @media (max-width: 700px) {
