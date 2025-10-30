@@ -14,7 +14,7 @@ const client = document.getElementById("client");
 const debrief = document.getElementById("debrief");
 //
 
-for (let index = 0; index < data.length; index++) {
+for (let index = 1; index < data.length - 2; index++) {
   data[index].addEventListener("click", () => {
     sprint.checked = false;
     client.checked = false;
@@ -26,16 +26,19 @@ for (let index = 0; index < data.length; index++) {
 }
 
 btn.addEventListener("click", () => {
-  target.classList.add("reservation");
-  target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
-  card = document.getElementsByClassName("card");
-
+  if (time_start.value == "" || reTexte.value == "") {
+    alert("remplire tout les input");
+  } else {
+    target.classList.add("reservation");
+    target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
+    card = document.getElementsByClassName("card");
+  }
   if (sprint.checked == true) {
     card[card.length - 1].style.background = "red";
   }
   if (client.checked == true) {
     card[card.length - 1].style.background = "blue";
-  }
+
   if (debrief.checked == true) {
     card[card.length - 1].style.background = "green";
   }
