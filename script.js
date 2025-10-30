@@ -14,6 +14,10 @@ const client = document.getElementById("client");
 const debrief = document.getElementById("debrief");
 //
 
+let reserve_card = document.createElement("div");
+reserve_card.className = "card";
+console.log(reserve_card);
+
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     sprint.checked = false;
@@ -25,16 +29,12 @@ for (let index = 0; index < data.length; index++) {
   });
 }
 btn.addEventListener("click", () => {
+  reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
+  target.appendChild(reserve_card);
   target.classList.add("reservation");
-  target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
-  card = document.getElementsByClassName("card");
-
-  for (let i = 0; i < card.length; i++) {
-    targetCard = card[i];
-  }
 
   if (sprint.checked == true) {
-    targetCard.style.background = "red";
+    reserve_card.style.background = "red";
     console.log(targetCard.innerHTML);
   }
   if (client.checked == true) {
@@ -45,7 +45,6 @@ btn.addEventListener("click", () => {
     targetCard.style.background = "green";
     console.log(target.innerHTML);
   }
-
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
