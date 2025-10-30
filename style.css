@@ -13,6 +13,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+header {
+  border: 1px solid black;
+  width: var(--calendar-width);
+}
 th {
   height: 50px;
   width: 14%;
@@ -24,7 +28,7 @@ table {
 }
 td {
   height: 40px;
-  height: 40vh;
+  height: 100vh;
   transition: 0.3s;
   text-align: end;
   vertical-align: text-top;
@@ -42,14 +46,6 @@ td:hover {
 h1 {
   text-shadow: 0 0 10px gray;
   font-size: 2rem;
-}
-body > label {
-  width: var(--calendar-width);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  background: yellowgreen;
 }
 label button {
   padding: 1rem;
