@@ -18,7 +18,7 @@ let reserve_card = document.createElement("div");
 reserve_card.className = "card";
 console.log(reserve_card);
 
-for (let index = 0; index < data.length; index++) {
+for (let index = 1; index < data.length - 2; index++) {
   data[index].addEventListener("click", () => {
     sprint.checked = false;
     client.checked = false;
@@ -28,22 +28,24 @@ for (let index = 0; index < data.length; index++) {
     target = data[index];
   });
 }
-btn.addEventListener("click", () => {
-  reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
-  target.appendChild(reserve_card);
-  target.classList.add("reservation");
 
+btn.addEventListener("click", () => {
+  if (time_start.value == "" || reTexte.value == "") {
+    alert("remplire tout les input");
+  } else {
+    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
+    target.appendChild(reserve_card);
+    target.classList.add("reservation");
+  }
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
-    console.log(targetCard.innerHTML);
   }
   if (client.checked == true) {
-    targetCard.style.background = "blue";
-    console.log(target.innerHTML);
+    reserve_card.style.background = "blue";
   }
+
   if (debrief.checked == true) {
-    targetCard.style.background = "green";
-    console.log(target.innerHTML);
+    reserve_card.style.background = "green";
   }
   modal.className = "popclose";
   fade.className = "fadeclose";

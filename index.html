@@ -12,12 +12,8 @@
       <h1>Calendrier</h1>
     </header>
     <table>
-      <label
-        ><button><</button>
-        OCTOBER
-        <button>></button></label
-      >
       <tr>
+        <th>Time</th>
         <th style="border: 2px solid red; color: red">Lundi</th>
         <th style="border: 2px solid blue; color: blue">Mardi</th>
         <th style="border: 2px solid green; color: green">Mercredi</th>
@@ -27,40 +23,42 @@
         <th style="border: 2px solid black">Dimanche</th>
       </tr>
       <tr align="center">
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td class="weekend">6</td>
-        <td class="weekend">7</td>
-      </tr>
-      <tr align="center">
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-        <td>11</td>
-        <td>12</td>
-        <td class="weekend">13</td>
-        <td class="weekend">14</td>
-      </tr>
-      <tr align="center">
-        <td>15</td>
-        <td>16</td>
-        <td>17</td>
-        <td>18</td>
-        <td>19</td>
-        <td class="weekend">20</td>
-        <td class="weekend">21</td>
-      </tr>
-      <tr align="center">
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-        <td>26</td>
-        <td class="weekend">27</td>
-        <td class="weekend">28</td>
+        <td align="left">
+          <h1>0:00</h1>
+          <hr />
+          <h1>1:00</h1>
+          <hr />
+          <h1>2:00</h1>
+          <hr />
+          <h1>3:00</h1>
+          <hr />
+          <h1>4:00</h1>
+          <hr />
+          <h1>5:00</h1>
+          <hr />
+          <h1>6:00</h1>
+          <hr />
+          <h1>7:00</h1>
+          <hr />
+          <h1>8:00</h1>
+          <hr />
+          <h1>9:00</h1>
+          <hr />
+          <h1>10:00</h1>
+          <hr />
+          <h1>11:00</h1>
+          <hr />
+          <h1>12:00</h1>
+          <hr />
+          <hr />
+        </td>
+        <td style="border: 2px solid red; background-color: #f99">1</td>
+        <td style="border: 2px solid blue; background-color: #99f">2</td>
+        <td style="border: 2px solid green; background-color: #9f9">3</td>
+        <td style="border: 2px solid yellow; background-color: #ee0">4</td>
+        <td style="border: 2px solid orange; background-color: #f90">5</td>
+        <td style="" class="weekend">6</td>
+        <td style="" class="weekend">7</td>
       </tr>
     </table>
     <div class="popclose">
@@ -69,11 +67,11 @@
       <h2>Type:</h2>
       <div class="typ">
         <label>Sprint</label>
-        <input id="sprint" type="radio" />
+        <input id="sprint" type="radio" name="radiobtn" />
         <label>Client</label>
-        <input id="client" type="radio" />
+        <input id="client" type="radio" name="radiobtn" />
         <label>Debrief</label>
-        <input id="debrief" type="radio" />
+        <input id="debrief" type="radio" name="radiobtn" />
       </div>
       <label for="time">Temp:</label>
       <input id="time_start" type="time" name="time" required />
