@@ -30,13 +30,13 @@ btn.addEventListener("click", () => {
   card = document.getElementsByClassName("card");
 
   if (sprint.checked == true) {
-    card.style.background = "red";
+    card[card.length - 1].style.background = "red";
   }
   if (client.checked == true) {
-    card.style.background = "blue";
+    card[card.length - 1].style.background = "blue";
   }
   if (debrief.checked == true) {
-    card.style.background = "green";
+    card[card.length - 1].style.background = "green";
   }
 
   modal.className = "popclose";
