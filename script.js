@@ -33,17 +33,16 @@ btn.addEventListener("click", () => {
     targetCard = card[i];
   }
 
-  console.log(card);
   if (sprint.checked == true) {
     targetCard.style.background = "red";
-    console.log(target.innerHTML);
+    console.log(targetCard.innerHTML);
   }
   if (client.checked == true) {
-    card.style.background = "blue";
+    targetCard.style.background = "blue";
     console.log(target.innerHTML);
   }
   if (debrief.checked == true) {
-    card.style.background = "green";
+    targetCard.style.background = "green";
     console.log(target.innerHTML);
   }
 
