@@ -6,6 +6,7 @@ const btn = document.getElementById("btn");
 const time_start = document.getElementById("time_start");
 let target;
 let card;
+let targetCard;
 let reserveType;
 //
 const sprint = document.getElementById("sprint");
@@ -16,6 +17,8 @@ const debrief = document.getElementById("debrief");
 for (let index = 0; index < data.length; index++) {
   data[index].addEventListener("click", () => {
     sprint.checked = false;
+    client.checked = false;
+    debrief.checked = false;
     modal.className = "popopen";
     fade.className = "fade";
     target = data[index];
@@ -24,9 +27,23 @@ for (let index = 0; index < data.length; index++) {
 btn.addEventListener("click", () => {
   target.classList.add("reservation");
   target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
-  card = document.querySelector(".card");
+  card = document.getElementsByClassName("card");
+
+  for (let i = 0; i < card.length; i++) {
+    targetCard = card[i];
+  }
+
+  console.log(card);
   if (sprint.checked == true) {
-    card.style.background = "red";
+    targetCard.style.background = "red";
+    console.log(target.innerHTML);
+  }
+  if (client.checked == true) {
+    card.style.background = "blue";
+    console.log(target.innerHTML);
+  }
+  if (debrief.checked == true) {
+    card.style.background = "green";
     console.log(target.innerHTML);
   }
 
