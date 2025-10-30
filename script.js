@@ -30,17 +30,15 @@ btn.addEventListener("click", () => {
   card = document.getElementsByClassName("card");
 
   for (let i = 0; i < card.length; i++) {
-    targetCard = card[i];
-  }
-
-  if (sprint.checked == true) {
-    targetCard.style.background = "red";
-  }
-  if (client.checked == true) {
-    targetCard.style.background = "blue";
-  }
-  if (debrief.checked == true) {
-    targetCard.style.background = "green";
+    if (sprint.checked == true) {
+      card[i].style.background = "red";
+    }
+    if (client.checked == true) {
+      card[i].style.background = "blue";
+    }
+    if (debrief.checked == true) {
+      card[i].style.background = "green";
+    }
   }
 
   modal.className = "popclose";
