@@ -24,6 +24,7 @@ for (let index = 0; index < data.length; index++) {
     target = data[index];
   });
 }
+
 btn.addEventListener("click", () => {
   target.classList.add("reservation");
   target.innerHTML = `${target.innerHTML} <div class="card" > <p>${time_start.value}</p> <p>${reTexte.value}</p> </div>`;
