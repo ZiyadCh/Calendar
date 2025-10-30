@@ -35,15 +35,12 @@ btn.addEventListener("click", () => {
 
   if (sprint.checked == true) {
     targetCard.style.background = "red";
-    console.log(targetCard.innerHTML);
   }
   if (client.checked == true) {
     targetCard.style.background = "blue";
-    console.log(target.innerHTML);
   }
   if (debrief.checked == true) {
     targetCard.style.background = "green";
-    console.log(target.innerHTML);
   }
 
   modal.className = "popclose";
