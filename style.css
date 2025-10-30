@@ -1,7 +1,8 @@
 * {
   font-family: "ubuntu";
   border-radius: 10px;
-}
+  margin:0;
+  padding: 0;
 :root {
   --calendar-width: 100%;
 }
@@ -32,7 +33,6 @@ table {
 }
 td {
   height: 40px;
-  height: 100vh;
   transition: 0.3s;
   text-align: end;
   vertical-align: text-top;
@@ -42,10 +42,14 @@ td {
 }
 td:nth-child(1) {
   text-align: start;
-  vertical-align: center;
 }
 td:hover {
   box-shadow: inset 0 0 1000px #0595;
+}
+td h1 {
+  height: 10vh;
+  border: solid 1px;
+  width: 100%;
 }
 .weekend {
   background: gray;
@@ -112,6 +116,7 @@ label button {
   align-items: center;
   margin: 5px;
   transition: 0.3s;
+  height: 20vh;
 }
 .card:hover {
   box-shadow: inset 0 0 100px #fff5;

@@ -30,6 +30,9 @@ for (let index = 1; index < data.length - 2; index++) {
 }
 
 btn.addEventListener("click", () => {
+  let reserve_card = document.createElement("div");
+  reserve_card.className = "card";
+
   if (time_start.value == "" || reTexte.value == "") {
     alert("remplire tout les input");
   } else {
