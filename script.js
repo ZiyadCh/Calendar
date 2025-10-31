@@ -9,6 +9,9 @@ let target;
 let card;
 let targetCard;
 let reserveType;
+let check = false;
+//
+const dlt = document.getElementById("btnDelete");
 
 const dropDetail = document.querySelector(".cardDclose");
 //
@@ -29,6 +32,7 @@ for (let index = 1; index < data.length - 2; index++) {
     sprint.checked = false;
     client.checked = false;
     debrief.checked = false;
+    check = false;
     modal.className = "popopen";
     fade.className = "fade";
     target = data[index];
@@ -40,7 +44,20 @@ btn.addEventListener("click", () => {
   let reserve_card = document.createElement("div");
   reserve_card.className = "card";
 
-  if (time_start.value == "" || reTexte.value == "") {
+  if (sprint.checked == true) {
+    reserve_card.style.background = "red";
+    check = true;
+  }
+  if (client.checked == true) {
+    reserve_card.style.background = "blue";
+    check = true;
+  }
+
+  if (debrief.checked == true) {
+    reserve_card.style.background = "green";
+    check = true;
+  }
+  if (time_start.value == "" || reTexte.value == "" || check == false) {
     alert("remplire tout les input");
   } else {
     reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
@@ -58,16 +75,6 @@ btn.addEventListener("click", () => {
       dropDetail.className = "gone";
     });
   }
-  if (sprint.checked == true) {
-    reserve_card.style.background = "red";
-  }
-  if (client.checked == true) {
-    reserve_card.style.background = "blue";
-  }
-
-  if (debrief.checked == true) {
-    reserve_card.style.background = "green";
-  }
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
@@ -84,13 +91,13 @@ fade.addEventListener("click", () => {
 //filter
 const filter = document.getElementById("filterBtn");
 const finput = document.getElementById("filterInput");
-
 filter.addEventListener("click", () => {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card) => {
     cardName = card.innerHTML;
     if (cardName.includes(finput)) {
+      console.log("safe");
     } else {
       card.className = "gone";
     }
