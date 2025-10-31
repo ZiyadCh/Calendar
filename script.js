@@ -14,6 +14,23 @@ let targetCard;
 let reserveType;
 let check = false;
 
+// for modifier
+
+modText.addEventListener("input", () => {
+  if (currentCard) {
+    const pElements = currentCard.querySelectorAll("p");
+    pElements[1].textContent = modText.value;
+  }
+});
+
+// Update time in real time
+modTime.addEventListener("input", () => {
+  if (currentCard) {
+    const pElements = currentCard.querySelectorAll("p");
+    pElements[0].textContent = modTime.value;
+  }
+});
+
 let dropDetail = document.querySelector(".cardDclose");
 //
 const dlt = document.getElementById("btnDelete");
