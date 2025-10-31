@@ -33,7 +33,7 @@ for (let index = 1; index < data.length - 2; index++) {
     modal.className = "popopen";
     fade.className = "fade";
     target = data[index];
-    e.stopImmediatePropagation();
+    e.stopPropagation();
   });
 }
 
