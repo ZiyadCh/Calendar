@@ -9,6 +9,8 @@ let target;
 let card;
 let targetCard;
 let reserveType;
+const filterBtn = document.getElementById("filterBtn");
+const filterInput = document.getElementById("filterInput");
 //
 const sprint = document.getElementById("sprint");
 const client = document.getElementById("client");
@@ -37,9 +39,10 @@ btn.addEventListener("click", () => {
   if (time_start.value == "" || reTexte.value == "") {
     alert("remplire tout les input");
   } else {
-    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
+    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p> <button >Delete</button>`;
     target.appendChild(reserve_card);
     target.classList.add("reservation");
+    target.stopPropagation();
   }
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
@@ -55,10 +58,13 @@ btn.addEventListener("click", () => {
   fade.className = "fadeclose";
 });
 
-reserve_card.addEventListener("onclick()", () => {
+reserve_card.addEventListener("mouseover", () => {
+  target.stopPropagation();
   cardDetail.className = "carD";
   console.log("happen");
 });
+
+//Filter
 
 //////////////////////////////////
 fade.addEventListener("click", () => {
