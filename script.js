@@ -40,10 +40,12 @@ for (let index = 1; index < data.length - 2; index++) {
   });
 }
 
+//create card !!!
 btn.addEventListener("click", () => {
   let reserve_card = document.createElement("div");
   reserve_card.className = "card";
 
+  //radio button
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
     check = true;
@@ -52,14 +54,15 @@ btn.addEventListener("click", () => {
     reserve_card.style.background = "blue";
     check = true;
   }
-
   if (debrief.checked == true) {
     reserve_card.style.background = "green";
     check = true;
   }
+  //validation
   if (time_start.value == "" || reTexte.value == "" || check == false) {
     alert("remplire tout les input");
   } else {
+    //cration
     reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
     target.appendChild(reserve_card);
     target.classList.add("reservation");
@@ -96,10 +99,15 @@ filter.addEventListener("click", () => {
 
   cards.forEach((card) => {
     cardName = card.innerHTML;
-    if (cardName.includes(finput)) {
+    if (cardName.innerHTML.includes(finput)) {
       console.log("safe");
     } else {
       card.className = "gone";
     }
   });
+});
+//Delete
+dlt.addEventListener("click", () => {
+  target.removeChild(reserve_card);
+  console.log("happening deelte");
 });
