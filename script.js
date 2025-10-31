@@ -4,6 +4,7 @@ const fade = document.querySelector(".fadeclose");
 const reTexte = document.getElementById("reTexte");
 const btn = document.getElementById("btn");
 const time_start = document.getElementById("time_start");
+const cardDetail = document.querySelector(".cardDclose");
 let target;
 let card;
 let targetCard;
@@ -54,7 +55,10 @@ btn.addEventListener("click", () => {
   fade.className = "fadeclose";
 });
 
-reserve_card.addEventListener("onclick()", () => {});
+reserve_card.addEventListener("onclick()", () => {
+  cardDetail.className = "carD";
+  console.log("happen");
+});
 
 //////////////////////////////////
 fade.addEventListener("click", () => {
