@@ -10,8 +10,6 @@ let card;
 let targetCard;
 let reserveType;
 
-const filterBtn = document.getElementById("filterBtn");
-const filterInput = document.getElementById("filterInput");
 //
 const sprint = document.getElementById("sprint");
 const client = document.getElementById("client");
@@ -40,13 +38,10 @@ btn.addEventListener("click", () => {
   if (time_start.value == "" || reTexte.value == "") {
     alert("remplire tout les input");
   } else {
-    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p> <button onclick="del()">Delete</button>`;
+    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
     target.appendChild(reserve_card);
     target.classList.add("reservation");
-    //delete
-    delet = document.querySelectorAll(".delete");
   }
-
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
   }
@@ -60,21 +55,13 @@ btn.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
+//card detail
 
-reserve_card.addEventListener("click", (event) => {
-  event.stopPropagation();
-  cardDetail.className = "carD";
-  console.log("happen");
+reserve_card.addEventListener("click", function (e) {
+  e.stopPropagation();
+  cardDetail.className = "cardD";
 });
 
-//Delete
-function del() {
-  target.removeChild(reserve_card);
-}
-
-//Filter
-
-//////////////////////////////////
 fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";

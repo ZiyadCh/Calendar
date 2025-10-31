@@ -15,7 +15,6 @@ body {
   align-items: center;
 }
 header {
-  border: 1px solid black;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -74,6 +73,7 @@ label button {
   display: none;
 }
 .carD{
+  display: block;
   position: fixed;
   background-color: white;
   top: 25%;
