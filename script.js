@@ -39,8 +39,6 @@ btn.addEventListener("click", () => {
   let reserve_card = document.createElement("div");
   reserve_card.className = "card";
 
-  let dropDetail = document.querySelector(".cardDclose");
-
   //radio button
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
