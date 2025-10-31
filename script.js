@@ -22,7 +22,6 @@ reserve_card.className = "card";
 console.log(reserve_card);
 
 let detailMenu = document.createElement("div");
-dropDetail.className = "carD";
 detailMenu.appendChild(dropDetail);
 
 for (let index = 1; index < data.length - 2; index++) {
@@ -48,7 +47,16 @@ btn.addEventListener("click", () => {
     target.appendChild(reserve_card);
     target.classList.add("reservation");
 
+    //detail menu
     reserve_card.appendChild(detailMenu);
+    reserve_card.addEventListener("mouseover", function (e) {
+      e.stopPropagation();
+      dropDetail.className = "carD";
+      console.log("happen");
+    });
+    reserve_card.addEventListener("mouseleave", () => {
+      dropDetail.className = "gone";
+    });
   }
   if (sprint.checked == true) {
     reserve_card.style.background = "red";
@@ -64,13 +72,10 @@ btn.addEventListener("click", () => {
   fade.className = "fadeclose";
 });
 //card detail
-
-reserve_card.addEventListener("click", function (e) {
+detailMenu.addEventListener("click", (e) => {
   e.stopPropagation();
-  detailMenu.className = "cardD";
-  console.log("happen");
 });
-
+//fade
 fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
@@ -79,6 +84,15 @@ fade.addEventListener("click", () => {
 //filter
 const filter = document.getElementById("filterBtn");
 const finput = document.getElementById("filterInput");
+
 filter.addEventListener("click", () => {
-  console.log(finput.value);
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    cardName = card.innerHTML;
+    if (cardName.includes(finput)) {
+    } else {
+      card.className = "gone";
+    }
+  });
 });
