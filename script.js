@@ -79,21 +79,6 @@ btn.addEventListener("click", () => {
 detailMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
-//filter
-const filter = document.getElementById("filterBtn");
-const finput = document.getElementById("filterInput");
-filter.addEventListener("click", () => {
-  const cards = document.querySelectorAll(".card");
-
-  cards.forEach((card) => {
-    cardName = card.innerHTML;
-    if (cardName.innerHTML.includes(finput)) {
-      console.log("safe");
-    } else {
-      card.className = "gone";
-    }
-  });
-});
 //Delete
 dlt.addEventListener("click", () => {
   target.removeChild(reserve_card);
