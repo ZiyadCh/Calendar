@@ -74,6 +74,7 @@ label button {
   display: none;
 }
 .carD {
+  top: 10px;
   display: flex;
   position: absolute;
   border: double 5px blue;
@@ -149,6 +150,7 @@ label button {
   transition: 0.3s;
   padding: 5px;
   margin: 4px;
+  z-index: 1;
 }
 .card:hover {
   box-shadow: inset 0 0 100px #fff5;

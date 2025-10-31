@@ -5,6 +5,9 @@ const reTexte = document.getElementById("reTexte");
 const btn = document.getElementById("btn");
 const time_start = document.getElementById("time_start");
 const cardDetail = document.querySelector(".cardDclose");
+const modText = document.getElementById("modText");
+const modTime = document.getElementById("mod_time_start");
+let currentCard;
 let target;
 let card;
 let targetCard;
@@ -63,27 +66,34 @@ btn.addEventListener("click", () => {
 
     //detail menu
     reserve_card.appendChild(dropDetail);
-    reserve_card.addEventListener("mouseover", function (e) {
+    reserve_card.addEventListener("mouseover", (e) => {
       e.stopPropagation();
+      currentCard = reserve_card;
+      reserve_card.appendChild(dropDetail);
       dropDetail.className = "carD";
-      console.log("happen");
     });
+
     reserve_card.addEventListener("mouseleave", (e) => {
-      dropDetail.className = "gone";
       e.stopPropagation();
+      dropDetail.className = "gone"; // hide when leaving
     });
   }
+
+  //Delete
+
+  dlt.addEventListener("click", () => {
+    if (currentCard && currentCard.parentNode) {
+      currentCard.remove();
+      dropDetail.className = "gone";
+      console.log("Deleted a card");
+    }
+  });
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
 //card detail
 dropDetail.addEventListener("click", (e) => {
   e.stopPropagation();
-});
-//Delete
-dlt.addEventListener("click", () => {
-  target.removeChild(reserve_card);
-  console.log("happening deelte");
 });
 //fade
 fade.addEventListener("click", () => {
