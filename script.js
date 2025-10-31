@@ -10,6 +10,8 @@ let card;
 let targetCard;
 let reserveType;
 let check = false;
+
+let dropDetail = document.querySelector(".cardDclose");
 //
 const dlt = document.getElementById("btnDelete");
 
