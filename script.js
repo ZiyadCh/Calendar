@@ -77,3 +77,8 @@ fade.addEventListener("click", () => {
 });
 
 //filter
+const filter = document.getElementById("filterBtn");
+const finput = document.getElementById("filterInput");
+filter.addEventListener("click", () => {
+  console.log(finput.value);
+});
