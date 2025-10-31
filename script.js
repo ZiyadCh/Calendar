@@ -57,7 +57,7 @@ btn.addEventListener("click", () => {
     alert("remplire tout les input");
   } else {
     //cration
-    reserve_card.innerHTML = ` <p>${time_start.value}</p> <p>${reTexte.value}</p>`;
+    reserve_card.innerHTML = `<p>${time_start.value}</p> <p>${reTexte.value}</p>`;
     target.appendChild(reserve_card);
     target.classList.add("reservation");
 
@@ -68,15 +68,16 @@ btn.addEventListener("click", () => {
       dropDetail.className = "carD";
       console.log("happen");
     });
-    reserve_card.addEventListener("mouseleave", () => {
+    reserve_card.addEventListener("mouseleave", (e) => {
       dropDetail.className = "gone";
+      e.stopPropagation();
     });
   }
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
 //card detail
-detailMenu.addEventListener("click", (e) => {
+dropDetail.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 //Delete
