@@ -48,7 +48,6 @@ td:hover {
 }
 td h1 {
   height: 10vh;
-  border: solid 1px;
   width: 100%;
 }
 .weekend {
@@ -65,7 +64,9 @@ label button {
   background: greenyellow;
   border: none;
 }
-
+.carDclose{
+  display: none;
+}
 .popclose {
   display: none;
 }

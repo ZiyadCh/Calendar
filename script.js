@@ -53,6 +53,10 @@ btn.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
+
+reserve_card.addEventListener("onclick()", () => {});
+
+//////////////////////////////////
 fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
