@@ -75,3 +75,5 @@ fade.addEventListener("click", () => {
   modal.className = "popclose";
   fade.className = "fadeclose";
 });
+
+//filter
