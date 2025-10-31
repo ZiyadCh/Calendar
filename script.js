@@ -23,7 +23,6 @@ modText.addEventListener("input", () => {
   }
 });
 
-// Update time in real time
 modTime.addEventListener("input", () => {
   if (currentCard) {
     const pElements = currentCard.querySelectorAll("p");
@@ -31,6 +30,7 @@ modTime.addEventListener("input", () => {
   }
 });
 
+//
 let dropDetail = document.querySelector(".cardDclose");
 //
 const dlt = document.getElementById("btnDelete");
@@ -92,7 +92,7 @@ btn.addEventListener("click", () => {
 
     reserve_card.addEventListener("mouseleave", (e) => {
       e.stopPropagation();
-      dropDetail.className = "gone"; // hide when leaving
+      dropDetail.className = "gone";
     });
   }
 
