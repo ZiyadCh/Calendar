@@ -13,19 +13,11 @@ let check = false;
 //
 const dlt = document.getElementById("btnDelete");
 
-const dropDetail = document.querySelector(".cardDclose");
 //
 const sprint = document.getElementById("sprint");
 const client = document.getElementById("client");
 const debrief = document.getElementById("debrief");
 //
-
-let reserve_card = document.createElement("div");
-reserve_card.className = "card";
-console.log(reserve_card);
-
-let detailMenu = document.createElement("div");
-detailMenu.appendChild(dropDetail);
 
 for (let index = 1; index < data.length - 2; index++) {
   data[index].addEventListener("click", (e) => {
@@ -44,6 +36,8 @@ for (let index = 1; index < data.length - 2; index++) {
 btn.addEventListener("click", () => {
   let reserve_card = document.createElement("div");
   reserve_card.className = "card";
+
+  let dropDetail = document.querySelector(".cardDclose");
 
   //radio button
   if (sprint.checked == true) {
@@ -68,7 +62,7 @@ btn.addEventListener("click", () => {
     target.classList.add("reservation");
 
     //detail menu
-    reserve_card.appendChild(detailMenu);
+    reserve_card.appendChild(dropDetail);
     reserve_card.addEventListener("mouseover", function (e) {
       e.stopPropagation();
       dropDetail.className = "carD";
@@ -85,12 +79,6 @@ btn.addEventListener("click", () => {
 detailMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
-//fade
-fade.addEventListener("click", () => {
-  modal.className = "popclose";
-  fade.className = "fadeclose";
-});
-
 //filter
 const filter = document.getElementById("filterBtn");
 const finput = document.getElementById("filterInput");
@@ -110,4 +98,9 @@ filter.addEventListener("click", () => {
 dlt.addEventListener("click", () => {
   target.removeChild(reserve_card);
   console.log("happening deelte");
+});
+//fade
+fade.addEventListener("click", () => {
+  modal.className = "popclose";
+  fade.className = "fadeclose";
 });
