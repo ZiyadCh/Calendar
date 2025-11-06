@@ -1,6 +1,7 @@
 * {
   font-family: "ubuntu";
-  border-radius: 10px;
+  margin: 0;
+  padding: 0;
 }
 :root {
   --calendar-width: 100%;
@@ -13,13 +14,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #efe;
+}
+.gone {
+  display: none;
 }
 header {
-  border: 1px solid black;
-  width: var(--calendar-width);
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: skyblue;
+}
+#filterBtn {
+  border-radius: 10px;
+  border: none;
+  padding: 1em;
+  background: seagreen;
+  color: white;
+  transition: 0.3s;
 }
 th {
   height: 50px;
@@ -31,28 +45,24 @@ table {
   border: none;
 }
 td {
-  height: 40px;
-  height: 100vh;
+  position: relative;
+  border-radius: 8px;
+  height: 20vh;
   transition: 0.3s;
   text-align: end;
   vertical-align: text-top;
   font-size: 1rem;
-  background: #ddd;
+  background: #aaa;
   padding: 8px;
 }
-td:nth-child(1) {
-  text-align: start;
-  vertical-align: center;
-}
 td:hover {
-  box-shadow: inset 0 0 1000px #0595;
+  box-shadow: inset 0 0 1000px #0aff;
 }
 .weekend {
   background: gray;
   cursor: not-allowed;
 }
 h1 {
-  text-shadow: 0 0 10px gray;
   font-size: 2rem;
 }
 label button {
@@ -61,7 +71,32 @@ label button {
   background: greenyellow;
   border: none;
 }
-
+.cardDclose {
+  display: none;
+}
+.carD {
+  top: 20px;
+  display: flex;
+  position: absolute;
+  border: double 5px blue;
+  border-radius: 30px;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  align-items: center;
+  z-index: 10;
+}
+.carD button {
+  background: #f00;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+}
 .popclose {
   display: none;
 }
@@ -77,6 +112,7 @@ label button {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  border-radius: 25px;
 }
 .popopen button {
   border: none;
@@ -90,6 +126,9 @@ label button {
   color: orangered;
   border: orangered 1px solid;
 }
+.popopen input {
+  padding: 10px;
+}
 
 .fade {
   top: 0;
@@ -98,23 +137,31 @@ label button {
   background-color: #0007;
   position: fixed;
   backdrop-filter: blur(10px);
+  z-index: 4;
 }
 .fadeclose {
   display: none;
 }
 .reservation {
-  border: solid 1px;
+  position: relative;
   height: max-content;
+  z-index: 0;
 }
 .card {
+  position: relative;
+  border: black solid 1px;
+  border-radius: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px;
   transition: 0.3s;
+  padding: 5px;
+  margin: 4px;
+  z-index: 1;
 }
 .card:hover {
   box-shadow: inset 0 0 100px #fff5;
+  border-bottom: 5px solid;
 }
 
 @media (max-width: 700px) {
